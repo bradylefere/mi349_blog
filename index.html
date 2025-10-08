@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MI349 Blog</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -17,69 +18,75 @@
         </nav>
     </header>
     <main>
-        <article>
-            <header>
-                <h2>My Day at the Gym</h2>
+        <div class="content">
+            <article>
+                <header>
+                    <h2>My Day at the Gym</h2>
+                    <p>
+                        <time datetime="2025-09-23">September 23, 2025</time> |
+                        <span>By Brady Lefere</span>
+                    </p>
+                </header>
+                <img src="workout.png" alt="Gym workout" width="400">
                 <p>
-                    <time datetime="2025-09-23">September 23, 2025</time> |
-                    <span>By Brady Lefere</span>
+                    Today I woke up and stretched, after that I made breakfast which consisted of 2 eggs and a piece of toast. While I was eating my roommate came out of his room and greeted me. After that I went to the gym for a workout, the workout lasted about an hour. I usually like to do a full body workout, starting with my upper body and finishing with legs because I feel that legs take more energy out of me than upper body training. Sometimes if I have extra time, I like to add cardio into the mix. After the workout I came back home for a shower. Doing some homework after working out tired me out so I ended up doomscrolling on <em>TikTok</em> for a while. Later in the afternoon, I decided to go for a walk in the park to clear my mind. The weather was perfect, and I enjoyed watching people play frisbee and walk their dogs. After returning home, I cooked a simple dinner and spent the evening reading a book. It was a productive and relaxing day overall.
                 </p>
-            </header>
-            <img src="workout.png" alt="Gym workout" width="400">
-            <p>
-                Today I woke up and stretched, after that I made breakfast which consisted of 2 eggs and a piece of toast. While I was eating my roommate came out of his room and greeted me. After that I went to the gym for a workout, the workout lasted about an hour. I usually like to do a full body workout, starting with my upper body and finishing with legs because I feel that legs take more energy out of me than upper body training. Sometimes if I have extra time, I like to add cardio into the mix. After the workout I came back home for a shower. Doing some homework after working out tired me out so I ended up doomscrolling on <em>TikTok</em> for a while. Later in the afternoon, I decided to go for a walk in the park to clear my mind. The weather was perfect, and I enjoyed watching people play frisbee and walk their dogs. After returning home, I cooked a simple dinner and spent the evening reading a book. It was a productive and relaxing day overall.
-            </p>
+                <section>
+                    <h3>Breakfast Table</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Food</th>
+                                <th>Quantity</th>
+                                <th>Calories</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Eggs</td>
+                                <td>2</td>
+                                <td>140</td>
+                            </tr>
+                            <tr>
+                                <td>Toast</td>
+                                <td>1 slice</td>
+                                <td>80</td>
+                            </tr>
+                            <tr>
+                                <td>Coffee</td>
+                                <td>1 cup</td>
+                                <td>5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </article>
+            <article>
+                <header>
+                    <h2>Why I Love Reading</h2>
+                    <p>
+                        <time datetime="2025-09-22">September 22, 2025</time> |
+                        <span>By Brady Lefere</span>
+                    </p>
+                </header>
+                <img src="reading.png" alt="Reading a book" width="400">
+                <p>
+                    Reading has always been a passion of mine. I liked reading since I was young, and since then, I've enjoyed getting more and more books. The feeling of reading anothers work and seeing the worlds that they can build in my imagination with just words on paper. I would say that the more that I've progressed into college the less time I feel like I've carved out to read, but I really want to get back into the habbit of it. The joy of reading and finishing books feels very rewarding to me, not only do I get to enjoy stories but I feel like my vernacular get bigger and bigger too. If money were not a problem, I think it would be really fun to try to be an author. I think it would be a fun challenge to try to write something that others would enjoy reading. I thin that I would write something allong the lines of fantasy or science fiction, because I really enjoy those genres. I think that writing is a great way to express yourself and your creativity, and I would love to try to do that more in the future.
+                </p>
+            </article>
             <section>
-                <h3>Breakfast Table</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Food</th>
-                            <th>Quantity</th>
-                            <th>Calories</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Eggs</td>
-                            <td>2</td>
-                            <td>140</td>
-                        </tr>
-                        <tr>
-                            <td>Toast</td>
-                            <td>1 slice</td>
-                            <td>80</td>
-                        </tr>
-                        <tr>
-                            <td>Coffee</td>
-                            <td>1 cup</td>
-                            <td>5</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <h2>Sign Up for Our Email Newsletter</h2>
+                <form netlify>
+                    <label for="newsletter-email">Email Address:</label>
+                    <input type="email" id="newsletter-email" name="newsletter-email" required>
+                    <button type="submit">Sign Up</button>
+                </form>
             </section>
-        </article>
-        <article>
-            <header>
-                <h2>Why I Love Reading</h2>
-                <p>
-                    <time datetime="2025-09-22">September 22, 2025</time> |
-                    <span>By Brady Lefere</span>
-                </p>
-            </header>
-            <img src="reading.png" alt="Reading a book" width="400">
-            <p>
-                Reading has always been a passion of mine. I liked reading since I was young, and since then, I've enjoyed getting more and more books. The feeling of reading anothers work and seeing the worlds that they can build in my imagination with just words on paper. I would say that the more that I've progressed into college the less time I feel like I've carved out to read, but I really want to get back into the habbit of it. The joy of reading and finishing books feels very rewarding to me, not only do I get to enjoy stories but I feel like my vernacular get bigger and bigger too. If money were not a problem, I think it would be really fun to try to be an author. I think it would be a fun challenge to try to write something that others would enjoy reading. I thin that I would write something allong the lines of fantasy or science fiction, because I really enjoy those genres. I think that writing is a great way to express yourself and your creativity, and I would love to try to do that more in the future.
-            </p>
-        </article>
-        <section>
-            <h2>Sign Up for Our Email Newsletter</h2>
-            <form netlify>
-                <label for="newsletter-email">Email Address:</label>
-                <input type="email" id="newsletter-email" name="newsletter-email" required>
-                <button type="submit">Sign Up</button>
-            </form>
-        </section>
+        </div>
+        <div class="sidebar">
+            <h3>About This Blog</h3>
+            <p>Welcome to MI349 Blog! Here you'll find posts about student life, productivity, and more.</p>
+        </div>
     </main>
     <footer>
         <p>&copy; 2025 Brady Student</p>
