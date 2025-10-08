@@ -18,29 +18,36 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h2>Contact Me</h2>
-            <form netlify>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <br>
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
-                <br>
-                <label for="reason">Reason for Contact:</label>
-                <select id="reason" name="reason" required>
-                    <option value="">--Please choose an option--</option>
-                    <option value="hi">Saying hi</option>
-                    <option value="contractor">Book reconmendation</option>
-                    <option value="interview">Interested in an interview</option>
-                </select>
-                <br>
-                <label for="comment">Comments:</label>
-                <textarea id="comment" name="comment" rows="4" required></textarea>
-                <br>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
+        <div class="content">
+            <section>
+                <h2>Contact Me</h2>
+                <form name="contact" method="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="reason">Reason for Contact:</label>
+                    <select id="reason" name="reason" required>
+                        <option value="">--Please choose an option--</option>
+                        <option value="hi">Saying hi</option>
+                        <option value="contractor">Book recommendation</option>
+                        <option value="interview">Interested in an interview</option>
+                    </select>
+
+                    <label for="comment">Comments:</label>
+                    <textarea id="comment" name="comment" rows="4" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </div>
+        <div class="sidebar">
+            <h3>About This Blog</h3>
+            <p>Welcome to MI349 Blog! Here you'll find posts about student life, productivity, and more.</p>
+        </div>
     </main>
     <footer>
         <p>&copy; 2025 Brady Student</p>
