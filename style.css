@@ -223,11 +223,115 @@ a[href^="http"] {
 @media (max-width: 900px) {
     main {
         flex-direction: column;
+        gap: 1.25rem;
+        padding: 1rem;
     }
+
+    .content {
+        order: 1;
+        padding: 0;
+    }
+
     .sidebar {
-        margin-bottom: 2rem;
+        order: 2;
+        width: 100%;
+        margin-top: 0;
     }
-    form {
+
+    /* Navigation */
+    nav ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        padding: 0.6rem 0.5rem;
+        font-size: 0.95rem;
+    }
+
+    /* Headings and text */
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.25rem; }
+    p { font-size: 1rem; line-height: 1.6; }
+
+    /* Form: stack label + control for narrow screens */
+    .form-row {
+        display: flex;
         flex-direction: column;
+        align-items: stretch;
+        gap: 0.35rem;
     }
+
+    .form-row label {
+        width: auto;
+        padding-top: 0;
+        text-align: left;
+    }
+
+    form button[type="submit"] {
+        width: 100%;
+    }
+
+    /* Table readability */
+    table, th, td { font-size: 0.95rem; }
+    .table-responsive { margin-bottom: 1rem; }
+}
+
+/* Small phone / narrow devices */
+@media (max-width: 480px) {
+    /* Further reduce spacings and keep readable text */
+    body { font-size: 16px; }
+
+    header { padding: 0.25rem 0.5rem; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.1rem; }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    main {
+        margin: 1rem;
+        padding: 0;
+    }
+
+    .sidebar {
+        padding: 0.75rem;
+        background: #f1f4f7;
+    }
+
+    /* Make inputs and textarea fill available width */
+    .form-row input,
+    .form-row select,
+    .form-row textarea {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    /* Improve contrast for accessibility on small screens */
+    header, footer {
+        background: #203044; /* darker for better contrast */
+        color: #fff;
+    }
+
+    /* Ensure tables don't overflow layout */
+    .table-responsive { width: 100%; }
+
+    /* Reduce footer padding */
+    footer { padding: 0.6rem 0; font-size: 0.9rem; }
+}
+
+/* Utility: ensure any table wrapper is scrollable on narrow screens */
+@media (max-width: 700px) {
+    .table-responsive { -ms-overflow-style: -ms-autohiding-scrollbar; }
+}
+
+/* Accessibility and focus */
+a:focus, button:focus, input:focus, select:focus, textarea:focus {
+    outline: 3px solid rgba(34, 75, 120, 0.25);
+    outline-offset: 2px;
 }
