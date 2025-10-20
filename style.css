@@ -330,8 +330,100 @@ a[href^="http"] {
     .table-responsive { -ms-overflow-style: -ms-autohiding-scrollbar; }
 }
 
-/* Accessibility and focus */
-a:focus, button:focus, input:focus, select:focus, textarea:focus {
-    outline: 3px solid rgba(34, 75, 120, 0.25);
+/* Responsive additions — append these to the bottom of the file */
+
+/* Make any table wrapper scrollable on small devices */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Ensure content and sidebar respect box-sizing and won't overflow */
+.content,
+.sidebar {
+    box-sizing: border-box;
+}
+
+/* Force images to fill their container and remain accessible */
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Improve forms and controls on medium screens */
+@media (max-width: 900px) {
+    main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    nav ul {
+        gap: 0.75rem;
+    }
+
+    nav a {
+        padding: 0.5rem 0.4rem;
+    }
+
+    .content {
+        padding: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 0.75rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+}
+
+/* Small/narrow device tweaks */
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    .form-row label {
+        width: auto;
+        padding-top: 0;
+    }
+
+    .form-row input,
+    .form-row select,
+    .form-row textarea {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .table-responsive {
+        margin-bottom: 1rem;
+    }
+
+    footer {
+        padding: 0.5rem 0;
+        font-size: 0.95rem;
+    }
+}
+
+/* Focus outlines for keyboard users */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid rgba(34, 75, 120, 0.2);
     outline-offset: 2px;
 }
